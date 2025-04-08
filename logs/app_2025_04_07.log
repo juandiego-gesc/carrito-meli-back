@@ -3069,3 +3069,7 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-04-07 22:32:26,791 [DEBUG] passlib.utils.compat: loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
 2025-04-07 22:32:26,791 [DEBUG] passlib.utils.compat: loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
 2025-04-07 22:32:26,812 [DEBUG] passlib.registry: registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2025-04-07 22:46:47,531 [DEBUG] passlib.utils.compat: loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2025-04-07 22:46:47,531 [DEBUG] passlib.utils.compat: loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2025-04-07 22:46:47,531 [DEBUG] passlib.utils.compat: loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2025-04-07 22:46:47,554 [DEBUG] passlib.registry: registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>

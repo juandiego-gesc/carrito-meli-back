@@ -1,0 +1,22 @@
+name: webhook-to-verdi
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST GitHub event to Verdi (Bearer simple)
+        run: |
+          curl -sS -X POST "$WEBHOOK_URL" \
+            -H "Authorization: Bearer $BEARER_TOKEN" \
+            -H "Content-Type: application/json" \
+            -H "User-Agent: GitHub-Actions" \
+            -H "X-GitHub-Event: $GITHUB_EVENT_NAME" \
+            -H "X-GitHub-Delivery: $GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT" \
+            --data-binary @"$GITHUB_EVENT_PATH"
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}

@@ -203,3 +203,4 @@ The project includes a Dockerfile for containerized deployment:
 docker build -t carrito-meli-api .
 docker run -p 8000:8000 carrito-meli-api
 ```
+
